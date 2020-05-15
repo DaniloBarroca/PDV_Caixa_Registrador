@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+void inicio()
+{
+printf("___MERCADINHO SEU JOAO____\n");
+printf(" OBRIGADO PELA PREFERENCIA! \n");
+}
+int main()
+
+{
+int prod[5] = {1,2,3,4,5};
+float preco[5] = {0};
+int i;
+float din,troc;
+float tot = 0;
+
+inicio();
+
+for (i=0;i < 5; i++){
+       printf("\nProduto %d:", i+1);
+    scanf("%f", &preco[i]);
+    printf("\n");
+            if ( preco[i] == 0){
+              printf("COMPRA FINALIZADA\n");
+               break;
+            }
+ }
+ 
+ for ( i=0;i <6; i++)
+tot += preco[i];
+
+printf("Total:%.1f\n",tot);
+
+printf("\n1 - Dinheiro\n");
+scanf("%f", &din);
+
+troc = din - tot;
+
+printf("%.2f\n", tot);
+
+
+printf(" Troco: %.2f" , troc);
+
+
+return 0;
+
+
+}
